@@ -4,11 +4,15 @@ import { Router, hashHistory } from 'react-router';
 import { Provider } from 'react-redux';
 import store from './store/store';
 import routes from './routes';
+import DevTools from './DevTools';
 
 render(
     <Provider store={store}>
-        <Router history={hashHistory} routes={routes}>
-        </Router>
-    </Provider>,
+      	<div>
+ 			<Router history={hashHistory} routes={routes} />
+ 			
+  			<DevTools />
+      	</div>
+      </Provider>,
     document.getElementById('root')
 );
